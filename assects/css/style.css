@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.row{
+    display: flex;
+}
+
+.col3{
+    width: calc(100% * 3 / 12);
+}
+
+.col9{
+    width: calc(100% * 9 / 12);
+}
+
+.heading{
+    background-color: #000;
+}
+
+.logo{
+    padding-left: 30px;
+    display: flex;
+    height: 72px;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.navbar ul{
+    display: flex;
+    height: 72px;
+    flex-direction: roe;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar li a:link, .navbar li a:visited{
+    text-decoration: none;
+    color: #fff;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    transition: all .3s ease-in-out;
+}
+
+.navbar li a:hover{
+    background-color: orange;
+}
+
+.toggelbtn{
+    display: none;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 72px;
+    padding: 10px;
+}
+
+@media all and (max-width: 600px){
+    .navbar ul{
+        display: none;
+    }
+    
+    nav .navbar{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 72px;
+        padding: 15px;
+    }
+
+    .toggelbtn{
+        display: block;
+        color: #fff;
+        font-size: 24px;
+    }
+    
+    .navbar ul.show{
+        position: fixed;
+        display: block;
+        left: 0;
+        right: 0;
+        top: 72px;
+        background-color: #000;
+        height: auto;
+    }
+}
